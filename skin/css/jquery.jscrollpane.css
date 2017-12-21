@@ -1,0 +1,104 @@
+﻿
+.jspContainer {
+	overflow:hidden;
+	position:relative;
+}
+.jspPane {
+	position:absolute;
+	z-index:1;
+}
+.jspVerticalBar {
+	position:absolute;
+	top:0;
+	right:0;
+	width:11px;
+	height:97%;
+	z-index:2; /*background:url(../images/icon03.gif) left top repeat-y;������������*/
+}
+.jspHorizontalBar {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:5px;
+	background:url(../images/scrollline.gif) repeat-x 0 center;
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+	margin:0;
+	padding:0;
+}
+.jspCap {
+	display:none;
+}
+.jspHorizontalBar .jspCap {
+	float:left;
+}
+.jspTrack {
+	position:relative;
+	background: #8aa06e;
+	width: 3px;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+}/*��������*/
+.jspDrag {
+	background:url(../images/bar.png) repeat-y;
+	position:relative;
+	top:0px;
+	left:-3px;
+	cursor:pointer;
+	width:9px;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	z-index:1000;
+	height:23px;
+}
+.jspHover {
+	background:url(../images/bar.png) repeat-y;
+	height:23px;
+}/*�������ʱ*/
+.jspActive {
+	background:url(../images/bar.png) repeat-y;
+no-repeat;
+	height:23px;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+	float:left;
+	height:100%;
+}
+.jspArrow {
+	background:#50506d;
+	text-indent:-20000px;
+	display:block;
+	cursor:pointer;
+}
+.jspArrow.jspDisabled {
+	cursor:default;
+	background:#80808d;
+}
+.jspVerticalBar .jspArrow {
+	height:14px;
+}
+.jspHorizontalBar .jspArrow {
+	width:14px;
+	float:left;
+	height:100%;
+}
+.jspVerticalBar .jspArrow:focus {
+	outline:none;
+}
+.jspCorner {
+	background:#fff;
+	float:left;
+	height:100%;
+}
+/*Yuk! CSS Hack for IE6 3pixel bug:(*/
+* html {
+	height:100px;
+}
+html .jspCorner {
+	margin:0 -3px 0 0;
+}

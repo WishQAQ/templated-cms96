@@ -1,0 +1,22 @@
+<div id="header">
+  <div class="nav">
+    <div class="logo"><a href="/"><img src="/skin/images/logo.png" /></a></div>
+    <div class="fenxianglan">
+      <div class="navfenxiang fl"> <span>分享</span>： <a href="#"><img src="/skin/images/nav_weixin.png" /></a> <a href="#"><img src="/skin/images/nav_tercent.png" /></a> <a href="#"><img src="/skin/images/nav_sina.png" /></a> </div>
+    </div>
+    <div class="nav_list">
+      <ul>
+        <li class="fl nav1"><a href="/">首页</a></li>
+        {dede:channelartlist typeid='top'}
+        <li class="fl nav2"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+          <dl class="nav_xiasy2">
+            {dede:channel type='son' noself='yes'}
+            <dd class="fl"><a href="[field:typelink/]">[field:typename/]</a></dd>
+            {/dede:channel}
+          </dl>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link type="text/css" href="/skin/css/icon.css" rel="shortcut icon" />
+<link type="text/css" href="/skin/css/base.css" rel="stylesheet" />
+<link type="text/css" href="/skin/css/page.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+	<link href="/skin/css/css3.css" rel="stylesheet" />
+	<script type="text/javascript" src="/skin/js/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="dynamic_container">
+  <div class="dynamic_content">
+    <div class="dynamic_wz"><img src="/skin/images/dynamic_new.png"></div>
+    <div class="banner mt12">
+      <ul>
+        {dede:list pagesize='10' limit='0,2'}
+        <li>
+          <div class="gly_left fl"><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" width="636" height="287" alt="[field:title/]" /></a></div>
+          <div class="gly_right fl pl40"> <a href="[field:arcurl/]" title="[field:title/]">
+            <p class="baiszt26">[field:title/]</p>
+            <p class="baiszt12 mt30">[field:description/]</p>
+            </a>
+            <p class="baiszt pt95">[field:pubdate function="MyDate('Y-m-d',@me)"/]<a href="[field:arcurl/]" class="ml185">更多+</a></p>
+          </div>
+        </li>
+        {/dede:list}
+      </ul>
+      <dl style="background:url(/skin/images/dynamic_picbiao.png) no-repeat;">
+        <dd class="fl mr10">1</dd>
+        <dd class="fl mr10">2</dd>
+      </dl>
+    </div>
+    <div class="dynamic_news">
+      <div class="dynamic_newsnr mt40"> {dede:list pagesize='15'}
+        <p class="chengsbg"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></p>
+        {/dede:list} </div>
+      </div>
+  </div>
+</div>
+<!--End #containner--> 
+{dede:include filename="footer.htm"/} 
+<!--[if IE 6]
+    <style type="text/css">
+        body{behavior:url("/css/csshover.htc");}
+    </style>
+    <script type="text/javascript" src="/skin/js/iepng.js"></script>
+    <script src="/skin/js/letskillie6.zh_cn.pack.js"></script>
+[endif]--> 
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/skin/js/navxiala.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.bannerswitch.js"></script> 
+<script type="text/javascript" src="/skin/js/lunhuan.js"></script> 
+<script type="text/javascript" src="/skin/js/shouyeanimate.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.fullpage.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery-ui-1.9.2.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.jscrollpane.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.mousewheel.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.lightbox-0.5.js"></script> 
+<script type="text/javascript" src="/skin/js/jquery.superslide.2.1.1.js"></script> 
+<script type="text/javascript">
+	$(".banner").bannerSwitch({
+		time : 4500,
+		animation :800
+	});
+    </script>
+</body>
+</html>
